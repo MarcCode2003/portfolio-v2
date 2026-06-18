@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc | Systems & Data Architecture Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4bb.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Fira Code', monospace; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-[#090d16] text-[#e2e8f0] antialiased min-h-screen selection:bg-teal-500/30 selection:text-teal-200">
+
+    <main class="max-w-6xl mx-auto px-4 py-12 md:py-24">
+        
+        <header class="mb-16 border-b border-slate-800/60 pb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="mono text-xs text-slate-400 tracking-wider">SYSTEM.STATUS: ACTIVE</span>
+                </div>
+                <h1 class="text-4xl font-bold tracking-tight text-white mb-2">Marc Samuel D. Canales</h1>
+                <p class="text-slate-400 max-w-xl">
+                    Computer Science graduate focused on building robust architectures, query optimization, and structured data pipelines. Actively upskilling in advanced backend patterns and foundational cloud infrastructure deployment.
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 max-w-md md:justify-end items-center content-center">
+                <span class="px-2.5 py-1 text-xs mono rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Backend Engineering</span>
+                <span class="px-2.5 py-1 text-xs mono rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Cloud (AWS) / DevOps</span>
+                <span class="px-2.5 py-1 text-xs mono rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Data Engineering</span>
+                <span class="px-2.5 py-1 text-xs mono rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">System Security</span> 
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-[#0f172a]/60 border border-slate-800/80 rounded-xl p-6 md:col-span-1 flex flex-col justify-between group hover:border-slate-700/80 transition-all duration-300">
+                <div class="mono text-xs text-slate-400 space-y-4">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                        <span>core_vitals.sh</span>
+                        <span class="text-slate-600">⚡</span>
+                    </div>
+                    <p><span class="text-teal-400">~$</span> cat education.txt<br><span class="text-white">B.S. Computer Science</span></p>
+                    <p><span class="text-teal-400">~$</span> cat core_focus.json<br><span class="text-slate-300">["High_Availability", "Query_Optimization", "CI_CD_Pipelines"]</span></p>
+                    
+                    <p><span class="text-teal-400">~$</span> telemetry --check-aws-roadmap<br>
+                        <span class="text-orange-400">⚡ AWS Cloud Practitioner [In-Progress]</span><br>
+                        <span class="text-slate-500">└─ Solutions Architect Assoc [Target]</span>
+                    </p>
+                    
+                    <p><span class="text-teal-400">~$</span> systemctl check security<br><span class="text-emerald-400">● protocols-verified</span></p>
+                </div>
+            </div>
+
+            <div class="bg-[#0f172a]/60 border border-slate-800/80 rounded-xl p-6 md:col-span-2 flex flex-col justify-between group hover:border-slate-700/80 transition-all duration-300 relative overflow-hidden">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/20">Data & Architecture</span>
+                        <div class="flex gap-4 text-xs mono text-slate-400">
+                            <a href="https://github.com/MarcCode2003" target="_blank" class="hover:text-white transition-colors flex items-center gap-1">🐙 GitHub</a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">CitiBike Urban Mobility Analytics Pipeline</h3>
+                    <p class="text-slate-400 text-sm mb-6 max-w-xl">Engineered high-performing relational infrastructure in MySQL Workbench mapping distributed hardware telemetry logs. Implemented specific mitigation strategies for ID enumeration and node collision risks.</p>
+                    
+                    <div class="mt-4 flex items-center gap-1.5 text-[10px] mono text-slate-500 mb-1.5 md:hidden">
+                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span>💡 Swipe code block horizontally to view full query</span>
+                    </div>
+
+                    <div class="bg-[#050811] border border-slate-800 rounded-lg p-4 custom-scrollbar overflow-x-auto mono text-xs text-slate-300 whitespace-pre leading-relaxed scrollbar-thin text-left">
+                    <span class="text-purple-400">SELECT</span> 
+                        cbs.short_name, 
+                        <span class="text-blue-400">SUM</span>(ss.bikes_available) <span class="text-purple-400">AS</span> total_bikes 
+                    <span class="text-purple-400">FROM</span> 
+                        citibike_stations <span class="text-purple-400">AS</span> cbs 
+                    <span class="text-purple-400">INNER JOIN</span> 
+                        station_status <span class="text-purple-400">AS</span> ss <span class="text-purple-400">ON</span> cbs.station_id = ss.station_id 
+                    <span class="text-purple-400">WHERE</span> 
+                        short_name <span class="text-purple-400">IS NOT NULL</span> 
+                    <span class="text-purple-400">GROUP BY</span> 
+                        cbs.short_name 
+                    <span class="text-purple-400">ORDER BY</span> 
+                        total_bikes <span class="text-purple-400">DESC</span>;</div>
+
+                    <div class="mt-4 border border-slate-800/80 rounded-lg p-4 h-[220px] bg-[#050811] flex items-center justify-center relative group-hover:border-slate-700/80 transition-all">
+                        <canvas id="citibikeChart" class="w-full h-full"></canvas>
+                    </div>
+                </div>
+                <div class="mt-4 flex flex-wrap gap-2 text-[10px] mono text-slate-400">
+                    <span>#MySQL_Workbench</span> <span>#Relational_Modeling</span> <span>#Query_Optimization</span>
+                </div>
+            </div>
+
+            <div class="bg-[#0f172a]/60 border border-slate-800/80 rounded-xl p-6 flex flex-col justify-between group hover:border-slate-700/80 transition-all duration-300">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20">Full-Stack AI</span>
+                        <span class="text-xs text-emerald-400 mono">Production Stable</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Lost Item Finder Platform</h4>
+                    <p class="text-slate-400 text-sm">Community driven architecture utilizing machine learning image similarity search algorithms across localized nodes in Japan and the Philippines.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/40 text-xs mono text-slate-500 flex justify-between items-center">
+                    <span>FastAPI / Next.js / Supabase</span>
+                    <a href="https://github.com/MarcCode2003/lost-item-finder" target="_blank" class="text-purple-400 hover:translate-x-1 transition-transform">🐙 Repository →</a>
+                </div>
+            </div>
+
+            <div class="bg-[#0f172a]/60 border border-slate-800/80 rounded-xl p-6 flex flex-col justify-between group hover:border-slate-700/80 transition-all duration-300">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-full border border-rose-500/20">Thesis / Security</span>
+                        <span class="text-xs text-emerald-400 mono">Production</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">E-vent Web based Event Management System with Biometrics</h4>
+                    <p class="text-slate-400 text-sm">Biometric web integration architecture implementing strict algorithmic decision trees to handle enterprise-level real-time request loads securely.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/40 text-xs mono text-slate-500 flex justify-between items-center">
+                    <span>PHP / MySQL / JavaScript</span>
+                    <a href="https://e-vent.cvsunaic.com/" target="_blank" class="text-rose-400 hover:translate-x-1 transition-transform flex items-center gap-1">
+                        🌐 Live Demo →
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-[#0f172a]/60 border border-slate-800/80 rounded-xl p-6 flex flex-col justify-between group hover:border-slate-700/80 transition-all duration-300">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20 block w-max mb-4">Core Systems Stack</span>
+                    <h4 class="text-lg font-bold text-white mb-3">Verified Frameworks</h4>
+                    
+                    <div class="space-y-2.5 text-xs mono text-slate-300">
+                        <div class="flex justify-between border-b border-slate-800 pb-1.5 items-start">
+                            <span class="text-slate-500">Databases:</span> 
+                            <span class="text-white text-right max-w-[180px] md:max-w-[200px]">MySQL, PostgreSQL, Supabase</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-800 pb-1.5 items-start">
+                            <span class="text-slate-500">Cloud/DevOps:</span> 
+                            <span class="text-orange-400 text-right max-w-[180px] md:max-w-[200px]">AWS Core Systems, Git/GitHub, WordPress Deployment</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-800 pb-1.5 items-start">
+                            <span class="text-slate-500">Core Languages:</span> 
+                            <span class="text-yellow-400 text-right max-w-[180px] md:max-w-[200px]">SQL, Python, PHP, Java, JavaScript, TypeScript</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-800 pb-1.5 items-start">
+                            <span class="text-slate-500">Frontend UI:</span> 
+                            <span class="text-teal-400 text-right max-w-[180px] md:max-w-[200px]">Svelte/SvelteKit, Tailwind CSS, HTML5/CSS3, Bootstrap</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="text-slate-500">Toolsets/IDEs:</span> 
+                            <span class="text-blue-400 text-right max-w-[180px] md:max-w-[200px]">VS Code, PyCharm, Figma, Eclipse, Godot</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-[10px] text-slate-500 tracking-wider mono uppercase">
+                    FOUNDATIONAL INFRASTRUCTURE & CLOUD ARCHITECTURE STACK
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="mt-20 border-t border-slate-800/60 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs mono text-slate-500">
+            <p>&copy; 2026 Marc. Systems & Data Architecture Portfolio.</p>
+            <div class="flex gap-4">
+                <a href="https://github.com/MarcCode2003" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/marc-samuel-canales-b87944317/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <script>
+        const ctx = document.getElementById('citibikeChart').getContext('2d');
+        
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['5216.06', '5033.01', '3762.08', '5667.08'],
+                datasets: [{
+                    label: 'Total Bikes',
+                    data: [45, 12, 0, 0],
+                    backgroundColor: 'rgba(45, 212, 191, 0.15)', // Transparent teal fill
+                    borderColor: 'rgba(45, 212, 191, 1)',       // Solid teal line
+                    borderWidth: 1.5,
+                    borderRadius: 6,
+                    hoverBackgroundColor: 'rgba(45, 212, 191, 0.3)'
+                }]
+            },
+            plugins: [ChartDataLabels],
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                // FIX 1: Nagdagdag ng padding sa kaliwa para hindi maputol ang Y-axis text label
+                layout: {
+                    padding: {
+                        left: 15,
+                        right: 10
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        color: '#2dd4bf', 
+                        font: {
+                            family: "'Fira Code', monospace",
+                            size: 11,
+                            weight: '600'
+                        },
+                        // FIX 2: Ibinalik si '0' para lundag agad ang zero data points
+                        formatter: function(value) {
+                            return value; 
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Station Code (short_name)',
+                            color: '#94a3b8', 
+                            font: { family: "'Fira Code', monospace", size: 11, weight: '500' }
+                        },
+                        ticks: {
+                            color: '#64748b',
+                            font: { family: "'Fira Code', monospace", size: 10 }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 55,
+                        grid: { color: 'rgba(51, 65, 85, 0.1)' },
+                        title: {
+                            display: true,
+                            text: 'Available Bikes (total_bikes)',
+                            color: '#94a3b8',
+                            font: { family: "'Fira Code', monospace", size: 11, weight: '500' }
+                        },
+                        ticks: {
+                            color: '#475569',
+                            font: { family: "'Fira Code', monospace", size: 10 }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
